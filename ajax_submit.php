@@ -1,6 +1,6 @@
 <?php
 // Admin recipient email id
-$toEmail = 'demo@example.com';
+$toEmail = 'deepakmepl101@gmail.com';
 
 $status = 0;
 $statusMsg = 'Oops! Something went wrong! Please try again late.';
