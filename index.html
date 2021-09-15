@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #popup-container{
+            max-width: 300px;
+            padding: 2rem;
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.3);
+            display: none;
+
+        }
+        #close-Btn{
+            float:right;
+            cursor: pointer;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+       <button id="show-Popup">Get Query</button>
+       <div id="popup-container">
+           <span id="close-Btn">X</span>
+           <h2>PopUP Heading</h2>
+           <p>Pop simple content</p>
+       <form action="emailcode.php"method="POST">
+                    <section class="formSection1">
+                        <div class="formGroup">
+                            <label>Name</label>
+                            <input required type="text"placeholder="Name">
+                        </div>
+                        <div class="formGroup">
+                            <label>Email id</label>
+                            <input required name="email"type="text"placeholder="email">
+                        </div>
+                        <div class="formGroup">
+                            <label>Mobile no.</label>
+                            <input type="text"placeholder="mobile">
+                        </div>
+                    </section>
+                    <section class="formSection2">
+                        <div class="formGroup">
+                            <label style="text-align: left;">Message</label><br>
+                            <textarea name="emessage" required rows="6">
+                            </textarea>
+                        </div>
+                        <div class="formGroup">
+                            <input name="esend"type="submit"value="Send Message">
+                        </div>
+                    </section>
+                    
+                </form>
+       </div>
+    </div>
+    <!--jquery file link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#show-Popup").click(function(){
+            $("#popup-container").show();
+        });
+        $("#close-Btn").click(function(){
+            $("#popup-container").hide();
+        });
+
+        });
+    </script>
+</body>
+</html>
